@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng ký du lịch</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+    }
+    .form-box {
+      width: 650px;
+      margin: 30px auto;
+      border: 1px solid #888;
+      background: #fffacd;
+      padding: 20px;
+    }
+    h2 {
+      color: #004080;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    td {
+      padding: 8px;
+      vertical-align: top;
+    }
+    input[type="text"], select, textarea {
+      width: 95%;
+      padding: 5px;
+      border: 1px solid #aaa;
+      border-radius: 3px;
+    }
+    .radio-group, .checkbox-group {
+      display: flex;
+      gap: 20px;
+    }
+    .guest-box {
+      border: 2px solid brown;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    .guest-box label {
+      margin-right: 10px;
+    }
+    button {
+      padding: 8px 15px;
+      background: #ccc;
+      border: 1px solid #777;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #bbb;
+    }
+    .success {
+      text-align: center;
+      margin-top: 15px;
+      color: red;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <h2>Đăng ký du lịch</h2>
+    <form onsubmit="return registerForm()">
+      <table>
+        <tr>
+          <td>Họ và tên</td>
+          <td><input type="text" id="name" required></td>
+        </tr>
+        <tr>
+          <td>Địa chỉ</td>
+          <td><input type="text" id="address" required></td>
+        </tr>
+        <tr>
+          <td>Điện thoại</td>
+          <td><input type="text" id="phone" required></td>
+        </tr>
+        <tr>
+          <td>Khách Việt Nam</td>
+          <td><input type="checkbox" id="vietnamese"></td>
+        </tr>
+        <tr>
+          <td>Chọn tour</td>
+          <td>
+            <select id="tour">
+              <option>Buôn Mê Thuột - Gia Lai - Kon Tum</option>
+              <option>Đà Nẵng - Hội An - Huế</option>
+              <option>Hạ Long - Cát Bà</option>
+              <option>Sapa - Hà Giang</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Phương tiện</td>
+          <td class="radio-group">
+            <label><input type="radio" name="vehicle" value="Máy bay"> Máy bay</label>
+            <label><input type="radio" name="vehicle" value="Xe ô tô"> Xe ô tô</label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <div class="guest-box">
+              <i>Số lượng đoàn khách</i><br>
+              <label>Người lớn <input type="text" id="adults" size="5"></label>
+              <label>Trẻ em <input type="text" id="children" size="5"></label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Ghi chú thêm</td>
+          <td><textarea id="note" rows="3"></textarea></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button type="submit">Đồng ý</button></td>
+        </tr>
+      </table>
+    </form>
+    <div id="success" class="success">
+      Bạn đã đăng ký thành công!!!
+    </div>
+  </div>
+
+  <script>
+    function registerForm() {
+      document.getElementById("success").style.display = "block";
+      return false; // không reload trang
+    }
+  </script>
+</body>
+</html>
