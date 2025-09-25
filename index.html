@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Ẩm Thực Việt</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+    /* Header */
+    .header {
+      background: #3d2b1f;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+    .header img {
+      height: 60px;
+    }
+
+    /* Menu ngang */
+    .menu {
+      background: #5a3e2b;
+      overflow: hidden;
+    }
+    .menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    .menu ul li {
+      flex: 1;
+    }
+    .menu ul li a {
+      display: block;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    .menu ul li a:hover {
+      background: #cc6600;
+    }
+
+    /* Banner */
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Nội dung món ăn */
+    .content {
+      background: #3d2b1f;
+      color: white;
+      padding: 20px;
+    }
+    .foods {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+    .food {
+      background: #fff;
+      color: black;
+      width: 18%;
+      padding: 10px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .food img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+    .food h3 {
+      font-size: 14px;
+      margin: 8px 0;
+    }
+    .food p {
+      font-size: 12px;
+      text-align: justify;
+    }
+    .food a {
+      color: red;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    .footer {
+      background: #3d2b1f;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <h1>Amthucviet.vn</h1>
+    <img src="https://i.ibb.co/mq8h6qX/flower.png" alt="Flower">
+  </div>
+
+  <!-- Menu -->
+  <div class="menu">
+    <ul>
+      <li><a href="#">TRANG CHỦ</a></li>
+      <li><a href="#">GIỚI THIỆU</a></li>
+      <li><a href="#">LIÊN HỆ</a></li>
+      <li><a href="#">TIN TỨC</a></li>
+    </ul>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner">
+    <img src="https://i.ibb.co/RcHhMT0/banner-bread.jpg" alt="Banner">
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+    <div class="foods">
+      <div class="food">
+        <img src="https://i.ibb.co/3FLr6wx/apple.jpg" alt="Táo mèo">
+        <h3>Táo Mèo Yên Bái</h3>
+        <p>Táo Mèo là tên gọi khác của cây có tên Sơn tra. Sơ chế đơn giản có thể ăn táo mèo vì...</p>
+        <a href="#">Xem tiếp</a>
+      </div>
+      <div class="food">
+        <img src="https://i.ibb.co/t89B2jX/fruit-dessert.jpg" alt="Chè thạch">
+        <h3>Chè thạch trái cây</h3>
+        <p>Nấu 1.5 lít nước với 200g đường cho tan. Cho nhãn vào, nấu sôi. Tiếp tục cho nhãn vào chung...</p>
+        <a href="#">Xem tiếp</a>
+      </div>
+      <div class="food">
+        <img src="https://i.ibb.co/xjDzSPK/salad.jpg" alt="Gỏi">
+        <h3>Gỏi đu đủ chay</h3>
+        <p>Bắt chảo, cho chút dầu cho hành, tỏi phi vàng, cho đu đủ vào xào với bột nêm khoảng 2 phút...</p>
+        <a href="#">Xem tiếp</a>
+      </div>
+      <div class="food">
+        <img src="https://i.ibb.co/PM5Hg8F/fish.jpg" alt="Lẩu hải sản">
+        <h3>Lẩu hải sản kiểu Pháp</h3>
+        <p>Xương cá rửa sạch, hớt bọt khi nấu. Nấu với nước sôi, sau đó cho tôm, mực, cá, ngao...</p>
+        <a href="#">Xem tiếp</a>
+      </div>
+      <div class="food">
+        <img src="https://i.ibb.co/NpTdbj7/chicken.jpg" alt="Mực đồn thịt">
+        <h3>Mực đồn thịt</h3>
+        <p>Nước ngọt do mực tiết ra trong khi hấp có thể dùng để pha chế sốt cà chua hoặc nêm thêm...</p>
+        <a href="#">Xem tiếp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    Copyright ©2012
+  </div>
+</body>
+</html>
