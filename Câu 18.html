@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tính giai thừa với Math</title>
+</head>
+<body>
+  <h2>Nhập số nguyên dương n:</h2>
+  <input type="number" id="inputN" min="1" />
+  <button onclick="calculateFactorial()">Tính giai thừa</button>
+
+  <!-- Vị trí hiển thị kết quả -->
+  <div id="result" style="margin-top: 20px; font-size: 18px; color: darkgreen;"></div>
+
+  <script>
+    function factorial(n) {
+      if (n === 0 || n === 1) return 1;
+      let result = 1;
+      for (let i = 2; i <= n; i++) {
+        result = Math.imul(result, i); // dùng Math.imul để nhân chính xác với số lớn
+      }
+      return result;
+    }
+
+    function calculateFactorial() {
+      const n = parseInt(document.getElementById("inputN").value);
+      if (isNaN(n) || n < 1) {
+        document.getElementById("result").innerText = "Vui lòng nhập số nguyên dương hợp lệ.";
+        return;
+      }
+
+      const fact = factorial(n);
+      document.getElementById("result").innerText = `Giai thừa của ${n} là: ${fact}`;
+    }
+  </script>
+</body>
+</html>

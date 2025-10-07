@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chuyển đổi nhị phân sang thập phân</title>
+</head>
+<body>
+  <h2>Nhập số nhị phân:</h2>
+  <input type="text" id="binaryInput" placeholder="Ví dụ: 1011" />
+  <button onclick="convertBinary()">Chuyển đổi</button>
+
+  <!-- Vị trí hiển thị kết quả -->
+  <div id="result" style="margin-top: 20px; font-size: 18px; color: darkred;"></div>
+
+  <script>
+    function convertBinary() {
+      const binaryStr = document.getElementById("binaryInput").value;
+
+      // Kiểm tra chuỗi chỉ chứa 0 và 1
+      if (!/^[01]+$/.test(binaryStr)) {
+        document.getElementById("result").innerText = "Vui lòng nhập số nhị phân hợp lệ (chỉ gồm 0 và 1).";
+        return;
+      }
+
+      // Chuyển đổi bằng parseInt và Math
+      const decimalValue = parseInt(binaryStr, 2);
+      document.getElementById("result").innerText = `Giá trị thập phân tương ứng là: ${decimalValue}`;
+    }
+  </script>
+</body>
+</html>

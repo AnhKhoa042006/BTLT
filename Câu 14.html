@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thông tin Sinh viên</title>
+</head>
+<body>
+  <h2>Thông tin đối tượng Student:</h2>
+  <div id="studentInfo" style="font-size: 18px; color: navy;"></div>
+
+  <script>
+    // Định nghĩa object Student
+    const Student = {
+      Name: "Nguyễn Văn A",
+      NumberID: "SV123456",
+      Gender: "Nam"
+    };
+
+    // In thông tin ra màn hình
+    const info = `
+      Họ tên: ${Student.Name}<br>
+      Mã số sinh viên: ${Student.NumberID}<br>
+      Giới tính: ${Student.Gender}
+    `;
+    document.getElementById("studentInfo").innerHTML = info;
+  </script>
+</body>
+</html>

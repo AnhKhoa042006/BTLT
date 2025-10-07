@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Đảo ngược số nguyên</title>
+</head>
+<body>
+  <h2>Nhập số nguyên để đảo ngược:</h2>
+  <input type="number" id="inputNumber" />
+  <button onclick="reverseAndDisplay()">Đảo ngược</button>
+
+  <!-- Vị trí tùy ý để hiển thị kết quả -->
+  <div id="resultArea" style="margin-top: 20px; font-weight: bold;"></div>
+
+  <script>
+    function reverseInteger(num) {
+      const reversed = parseInt(Math.abs(num).toString().split('').reverse().join(''));
+      return num < 0 ? -reversed : reversed;
+    }
+
+    function reverseAndDisplay() {
+      const input = document.getElementById('inputNumber').value;
+      const reversed = reverseInteger(parseInt(input));
+      document.getElementById('resultArea').innerText = `Số đảo ngược là: ${reversed}`;
+    }
+  </script>
+</body>
+</html>

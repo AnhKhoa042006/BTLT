@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Liệt kê số nguyên tố nhỏ hơn n</title>
+</head>
+<body>
+  <h2>Nhập số nguyên dương n:</h2>
+  <input type="number" id="inputN" min="2" />
+  <button onclick="listPrimes()">Liệt kê số nguyên tố</button>
+
+  <!-- Vị trí tùy ý để hiển thị kết quả -->
+  <div id="primeList" style="margin-top: 20px; font-size: 16px; color: green;"></div>
+
+  <script>
+    function isPrime(num) {
+      if (num < 2) return false;
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+      }
+      return true;
+    }
+
+    function listPrimes() {
+      const n = parseInt(document.getElementById('inputN').value);
+      let primes = [];
+
+      for (let i = 2; i < n; i++) {
+        if (isPrime(i)) {
+          primes.push(i);
+        }
+      }
+
+      document.getElementById('primeList').innerText =
+        `Các số nguyên tố nhỏ hơn ${n} là:\n${primes.join(', ')}`;
+    }
+  </script>
+</body>
+</html>

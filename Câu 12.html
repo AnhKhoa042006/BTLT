@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tính lũy thừa b^n</title>
+</head>
+<body>
+  <h2>Nhập số nguyên dương b và n:</h2>
+  <label for="base">Cơ số (b):</label>
+  <input type="number" id="base" min="1" />
+  <br><br>
+  <label for="exponent">Số mũ (n):</label>
+  <input type="number" id="exponent" min="1" />
+  <br><br>
+  <button onclick="calculatePower()">Tính b^n</button>
+
+  <!-- Vị trí tùy ý để hiển thị kết quả -->
+  <div id="output" style="margin-top: 20px; font-size: 18px; color: blue;"></div>
+
+  <script>
+    function power(b, n) {
+      return Math.pow(b, n);
+    }
+
+    function calculatePower() {
+      const b = parseInt(document.getElementById('base').value);
+      const n = parseInt(document.getElementById('exponent').value);
+
+      if (b > 0 && n > 0) {
+        const result = power(b, n);
+        document.getElementById('output').innerText = `Giá trị của ${b}^${n} là: ${result}`;
+      } else {
+        document.getElementById('output').innerText = 'Vui lòng nhập các số nguyên dương.';
+      }
+    }
+  </script>
+</body>
+</html>

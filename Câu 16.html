@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thông tin Hình Trụ</title>
+</head>
+<body>
+  <h2>Kết quả tính toán với đối tượng HinhTru:</h2>
+  <div id="output" style="font-size: 18px; color: darkblue;"></div>
+
+  <script>
+    // Định nghĩa đối tượng HinhTru
+    let HinhTru = {
+      radius: 10,
+      height: 15
+    };
+
+    // a) Tính thể tích hình trụ: V = π * r² * h
+    const volume = Math.PI * Math.pow(HinhTru.radius, 2) * HinhTru.height;
+
+    // b) Cập nhật chiều cao và tính diện tích toàn phần: S = 2πr² + 2πrh
+    HinhTru.height = 30;
+    const surfaceArea = 2 * Math.PI * Math.pow(HinhTru.radius, 2) + 2 * Math.PI * HinhTru.radius * HinhTru.height;
+
+    // Hiển thị kết quả
+    document.getElementById("output").innerHTML = `
+      Thể tích ban đầu của hình trụ (r = 10, h = 15): ${volume.toFixed(2)} đơn vị khối<br>
+      Sau khi cập nhật chiều cao h = 30:<br>
+      Diện tích toàn phần của hình trụ: ${surfaceArea.toFixed(2)} đơn vị diện tích
+    `;
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thao tác với đối tượng User</title>
+</head>
+<body>
+  <h2>Thông tin đối tượng User:</h2>
+  <div id="userInfo" style="font-size: 18px; color: darkgreen;"></div>
+
+  <script>
+    // a) Khởi tạo đối tượng User
+    let User = {
+      Name: "Max",
+      Age: 20
+    };
+
+    // b) Thêm thuộc tính Surname
+    User.Surname = "Lee";
+
+    // c) Thay đổi giá trị Age thành 30
+    User.Age = 30;
+
+    // In ra thông tin của đối tượng u
+    const info = `
+      Họ tên: ${User.Name} ${User.Surname}<br>
+      Tuổi: ${User.Age}
+    `;
+    document.getElementById("userInfo").innerHTML = info;
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hiển thị ngày giờ</title>
+  <script>
+    window.onload = function() {
+      var now = new Date();
+      var date = now.toLocaleDateString('vi-VN');
+      var time = now.toLocaleTimeString('vi-VN');
+      alert("Trang này cho biết\nNgày: " + date + " Giờ: " + time);
+    };
+  </script>
+</head>
+<body>
+  <h1>Chào mừng bạn!</h1>
+</body>
+</html>
